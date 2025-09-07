@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Coverflow - One Page Portfolio</title>
+    <link href="templatemo-3d-coverflow.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Mali', sans-serif;
+      line-height: 1.7;
+      padding: 24px;
+      background: #fff;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 17.5 50)" />
+                    <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                    <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">พายุไต้ฝุ่นไห่เยี่ยน</div>
+        </a>
+        
+        <nav class="main-menu" id="mainMenu">
+            <a href="#home" class="menu-item active">Picture</a>
+            <a href="#about" class="menu-item">About</a>
+            <a href="#about" class="menu-item">About</a>
+            <a href="#contact" class="menu-item">Information</a>
+            
+        </nav>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="coverflow-wrapper">
+            <div class="info">
+                <h2 id="current-title">Mountain Landscape</h2>
+                <p id="current-description">Majestic peaks covered in snow during golden hour</p>
+            </div>
+
+            <div class="coverflow-container" tabindex="0">
+                <div class="coverflow" id="coverflow">
+                    <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                            <img src="images/mountain-landscape.jpg" alt="Mountain Landscape" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="1">
+                        <div class="cover image-loading">
+                            <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="2">
+                        <div class="cover image-loading">
+                            <img src="images/serene-water-mirroring.jpg" alt="Lake Reflection" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="3">
+                        <div class="cover image-loading">
+                            <img src="images/ocean-sunset-golden-hour.jpg" alt="Ocean Sunset" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="4">
+                        <div class="cover image-loading">
+                            <img src="images/rolling-sand-dunes.jpg" alt="รูปพายุไฮเยี่ยน" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="5">
+                        <div class="cover image-loading">
+                            <img src="images/starry-night.jpg" alt="Starry Night" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="6">
+                        <div class="cover image-loading">
+                            <img src="images/cascading-waterfall.jpg" alt="Waterfall" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                </div>
+
+                <button class="nav-button prev" onclick="navigate(-1)">‹</button>
+                <button class="nav-button next" onclick="navigate(1)">›</button>
+
+                <div class="dots-container" id="dots"></div>
+                
+                <!-- Play/Pause Button -->
+                <button class="play-pause-button" id="playPauseBtn" onclick="toggleAutoplay()">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon" style="display: none;">❚❚</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>ที่มาและความสำคัญ</h2>
+                <p>พายุไฮเยี่ยน (Typhoon Haiyan) หรือชื่อในฟิลิปปินส์ว่า “โยลันดา” (Yolanda) เป็นหนึ่งในพายุไต้ฝุ่นที่รุนแรงที่สุดในประวัติศาสตร์โลก ทั้งในแง่ความเร็วลมและความเสียหายที่เกิดขึ้น</p>
+            </div>
+            
+            <div class="about-main">
+                <div class="about-visual">
+                    <div class="showcase-display">
+                        <div class="showcase-main">
+                            <div class="corner-decoration top-left"></div>
+                            <div class="corner-decoration bottom-right"></div>
+                            
+                            <div class="showcase-logo">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="25" width="15" height="50" fill="white" transform="rotate(-15 17.5 50)" opacity="0.9" />
+                                    <rect x="35" y="15" width="15" height="70" fill="white" />
+                                    <rect x="60" y="25" width="15" height="50" fill="white" transform="rotate(15 67.5 50)" opacity="0.9" />
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" opacity="0.3" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="showcase-title">แหล่งอ้างอิง</h3>
+                            <p class="showcase-subtitle">ที่มาแลพความสำคัญ</p>
+                            
+                            <div class="showcase-badges">
+                                <a href="https://th.m.wikipedia.org/wiki/%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B9%84%E0%B8%95%E0%B9%89%E0%B8%9D%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%AB%E0%B9%88%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99_(%E0%B8%9E.%E0%B8%A8._2556)" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่1</a>
+                                <a href="https://www.internetgeography.net/topics/typhoon-haiyan-case-study/" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่2</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <h3>ที่มา</h3>
+                    <p>	1.การก่อตัวพายุไฮเยี่ยนก่อตัวขึ้นเมื่อวันที่ 2 พฤศจิกายน ค.ศ. 2013 บริเวณตะวันตกของมหาสมุทรแปซิฟิกตอนกลาง</p>
+                    <p> 2.เส้นทางการเคลื่อนตัวพายุเคลื่อนเข้าประชิดฟิลิปปินส์ทางตะวันออก และขึ้นฝั่งที่จังหวัดเลย์เต (Leyte) และซามาร์ (Samar) เมื่อวันที่ 8 พฤศจิกายน 2013</p>
+                    
+                    <ul class="feature-list">
+                        <h3>ความสำคัญ</h3>
+                        <li>ด้านมนุษยธรรม</li>
+                        <li>ด้านสิ่งแวดล้อมและเศรษฐกิจ</li>
+                        <li>ด้านวิทยาศาสตร์และการเรียนรู้</li>
+                        <li>ด้านความร่วมมือระหว่างประเทศ</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">
+                        แหล่งอ้างอิง
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number">315 </div>
+                    <div class="stat-label">ความเร็วสูงสุด</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7m</div>
+                    <div class="stat-label">คลื่นพายุซัดฝั่ง</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6300คน</div>
+                    <div class="stat-label">จำนวนผู้เสียีวิต</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">14000ล้าน</div>
+                    <div class="stat-label">มูลค่าความเสียหาย</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>สาเหตุและผลกระทบของพายุไฮเยี่ยน</h2>
+             
+            </div>
+            
+            <div class="about-main">
+                <div class="about-visual">
+                    <div class="showcase-display">
+                        <div class="showcase-main">
+                            <div class="corner-decoration top-left"></div>
+                            <div class="corner-decoration bottom-right"></div>
+                            
+                            <div class="showcase-logo">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="25" width="15" height="50" fill="white" transform="rotate(-15 17.5 50)" opacity="0.9" />
+                                    <rect x="35" y="15" width="15" height="70" fill="white" />
+                                    <rect x="60" y="25" width="15" height="50" fill="white" transform="rotate(15 67.5 50)" opacity="0.9" />
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" opacity="0.3" />
+                                </svg>
+                            </div>
+                            <h3 class="showcase-title">แหล่งอ้างอิง</h3>
+                             <p class="showcase-subtitle">สาเหตุและผลกระทบของพายุไฮเยี่ยน</p>
+                            
+                            <div class="showcase-badges">
+                                <a href="https://www.worldvision.org/disaster-relief-news-stories/2013-typhoon-haiyan-facts" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่1</a>
+                                <a href="/Users/3k/Library/Group Containers/group.com.apple.coreservices.useractivityd/shared-pasteboard/items/84BA9D65-3CEC-4C71-810F-55E73D0CBB11/Dy_and_Stephens.pdf" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่2</a>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="about-info">
+                    <h3>สาเหตุของพายุไฮเยี่ยน</h3>
+                    <p>	1.อุณหภูมิน้ำทะเลสูงน้ำทะเลในมหาสมุทรแปซิฟิกตะวันตกมีอุณหภูมิสูงกว่า 26.5°C ทำให้เกิดการระเหยของไอน้ำมากและเพิ่มพลังงานให้กับพายุ</p>
+                    <p> 2.ความกดอากาศต่ำเกิดบริเวณศูนย์กลาง ทำให้อากาศรอบข้างไหลเข้ามาและหมุนเวียนรุนแรง</p>
+                    <p>	3.ลมเฉือนในบรรยากาศต่ำบริเวณนั้นมีลมเฉือน (wind shear) น้อย ทำให้พายุสามารถทวีกำลังแรงขึ้นโดยไม่ถูกทำลายโครงสร้าง </p>
+
+                    <ul class="feature-list">
+                        <h3>ผลกระทบของพายุไฮเยี่ยน</h3>
+                        <li>บ้านเรือนเสียหาย</li>
+                        <li>ป่าชายเลนและแนวประกาลังถูกทำลาย</li>
+                        <li>ขยะทับถม</li>
+                        <li>ศพคนจัดการไม่หมด</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">
+                        แหล่งอ้างอิง
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+     <section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>แนวทางป้องกันและแก้ไขปัญหา</h2>
+                <p>Protect</p>
+            </div>
+            
+            <div class="about-main">
+                <div class="about-visual">
+                    <div class="showcase-display">
+                        <div class="showcase-main">
+                            <div class="corner-decoration top-left"></div>
+                            <div class="corner-decoration bottom-right"></div>
+                            
+                            <div class="showcase-logo">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="25" width="15" height="50" fill="white" transform="rotate(-15 17.5 50)" opacity="0.9" />
+                                    <rect x="35" y="15" width="15" height="70" fill="white" />
+                                    <rect x="60" y="25" width="15" height="50" fill="white" transform="rotate(15 67.5 50)" opacity="0.9" />
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" opacity="0.3" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="showcase-title">แนวทางการแก้ไขปัญหา</h3>
+                            <p class="showcase-subtitle"></p>
+                            
+                            <div class="showcase-badges">
+                                <a href="https://recovery.preventionweb.net/collections/recovery-collection-typhoon-haiyan-yolanda-2013" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่1</a>
+                                <a href="https://www.sciencedirect.com/science/article/pii/S2590061724000681" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่2</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <h3>แนวทางป้องกัน</h3>
+                    <p>	1.ระบบเตือนภัยล่วงหน้า (Early Warning System)</p>
+                    <p> 2.การวางผังเมืองที่ปลอดภัยหลีกเลี่ยงการสร้างบ้านเรือนในเขตเสี่ยงคลื่นพายุซัดฝั่ง</p>
+                    <p>3.การจัดการทรัพยากรธรรมชาติฟื้นฟูป่าชายเลนและแนวปะการังซึ่งเป็นเกราะธรรมชาติช่วยลดความแรงของคลื่นรักษาสิ่งแวดล้อมเพื่อลดผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ </p>
+
+                    <ul class="feature-list">
+                        <h3>แนวทางแก้ไข (หลังเกิดภัยพิบัติ)</h3>
+                        <li>1.การช่วยเหลือฉุกเฉิน</li>
+                        <li>2.การฟื้นฟูเศรษฐกิจและชุมชน</li>
+                        <li>3.การฟื้นฟูสิ่งแวดล้อม</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">
+                        แหล่งอ้างอิง
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+
+     </section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>reference</h2>
+                
+            </div>  
+            <div class="about-main">
+                <div class="about-visual">
+                    <div class="showcase-display">
+                        <div class="showcase-main">
+                            <div class="corner-decoration top-left"></div>
+                            <div class="corner-decoration bottom-right"></div>
+                            
+                            <div class="showcase-logo">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="25" width="15" height="50" fill="white" transform="rotate(-15 17.5 50)" opacity="0.9" />
+                                    <rect x="35" y="15" width="15" height="70" fill="white" />
+                                    <rect x="60" y="25" width="15" height="50" fill="white" transform="rotate(15 67.5 50)" opacity="0.9" />
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" opacity="0.3" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="showcase-title">แหล่งอ้างอิง</h3>
+                           
+                            
+                            <div class="showcase-badges">
+                                <a href="https://www.britannica.com/event/Typhoon-Haiyan" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่1</a>
+                                <a href="https://www.unocha.org/story/typhoon-haiyan-yolanda-one-year-later" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่2</a>
+                                <a href="https://www.nasa.gov/mission_pages/hurricanes/archives/2013/h2013_Haiyan.html" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่3</a>
+                                <a href="https://www.preventionweb.net/publications/view/32372" target="_blank" rel="noopener noreferrer" class="badge">แหล่งอ้างอิงที่4</a>
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                                            <h3 class="showcase-title">อัจจิมา ย่ามไธสง เลขที่18 6/1</h3>
+
+                
+                
+             
+            
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <span>↑</span>
+    </div>
+
+<script src="templatemo-3d-coverflow-scripts.js"></script>
+
+</body>
+</html>
